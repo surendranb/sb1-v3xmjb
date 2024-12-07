@@ -33,7 +33,7 @@ Before we dive deep into the future, let's understand where we are today with th
 This perspective is further elaborated in this fascinating podcast discussion:
 
 <iframe 
-  src="https://open.spotify.com/embed/episode/1XhfKZGmxdvFJG8XQWjIYr" 
+  src="https://open.spotify.com/embed/episode/7d2qd2rD4aKG54musxLm6q" 
   width="100%" 
   height="152" 
   frameborder="0" 
@@ -45,7 +45,7 @@ This perspective is further elaborated in this fascinating podcast discussion:
 
 Understanding how neural networks process information is crucial:
 
-![Neural Network Architecture](https://res.cloudinary.com/demo/image/upload/neural_network_diagram.jpg)
+![Neural Network Architecture](https://images.unsplash.com/photo-1732470878984-f35c1a805e3f)
 
 ## Key Considerations
 

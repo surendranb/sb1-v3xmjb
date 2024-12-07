@@ -4,15 +4,15 @@ import ThemeToggle from './ThemeToggle';
 const links = [
   { href: '/', text: 'Home' },
   { href: '/writing', text: 'Writing' },
-  { href: '/projects', text: 'Projects' },
-  { href: '/notes', text: 'Notes' },
+  // { href: '/projects', text: 'Projects' },
+  // { href: '/notes', text: 'Notes' },
 ];
 ---
 
 <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
   <div class="max-w-4xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="font-serif text-xl text-primary dark:text-primary-light hover:text-primary-light dark:hover:text-primary transition-colors">JD</a>
+      <a href="/" class="font-serif text-xl text-primary dark:text-primary-light hover:text-primary-light dark:hover:text-primary transition-colors">Surendran</a>
       <div class="flex items-center space-x-8">
         <ul class="flex space-x-8">
           {links.map(link => (
@@ -27,7 +27,7 @@ const links = [
             </li>
           ))}
         </ul>
-        <ThemeToggle client:load />
+        <!-- <ThemeToggle client:load /> -->
       </div>
     </div>
   </div>
