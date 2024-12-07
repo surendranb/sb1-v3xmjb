@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+
+const projects = [
+  {
+    title: "Project Clarity",
+    description: "An open-source documentation generator that creates beautiful, searchable docs from your codebase.",
+    tech: ["TypeScript", "React", "Node.js"],
+    link: "https://github.com/yourusername/project-clarity"
+  },
+  {
+    title: "DevFlow",
+    description: "A VS Code extension that streamlines your development workflow with AI-powered suggestions.",
+    tech: ["TypeScript", "VS Code API"],
+    link: "https://github.com/yourusername/devflow"
+  },
+  {
+    title: "SystemViz",
+    description: "Interactive system architecture visualization tool for complex distributed systems.",
+    tech: ["React", "D3.js", "WebAssembly"],
+    link: "https://github.com/yourusername/systemviz"
+  }
+];
+---
+
+<Layout title="Projects | John Doe">
+  <Navigation />
+  <main class="max-w-3xl mx-auto px-4 py-20">
+    <h1 class="font-serif text-4xl mb-12 text-gray-900">Projects</h1>
+    <div class="space-y-12">
+      {projects.map(project => (
+        <article class="prose">
+          <h2 class="text-2xl font-serif">
+            <a href={project.link} class="text-gray-900 hover:text-primary no-underline">
+              {project.title}
+            </a>
+          </h2>
+          <p class="text-gray-700">{project.description}</p>
+          <div class="flex gap-2">
+            {project.tech.map(tech => (
+              <span class="text-sm bg-gray-100 px-2 py-1 rounded">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </main>
+</Layout>

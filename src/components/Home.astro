@@ -1,0 +1,65 @@
+---
+import AnimatedSection from './AnimatedSection.astro';
+---
+
+<section class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+  </div>
+
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 pointer-events-none"></div>
+
+  <!-- Content -->
+  <AnimatedSection className="max-w-3xl relative">
+    <span class="font-handwritten text-xl text-accent mb-2 block opacity-0 animate-fade-in">
+      Hello there!
+    </span>
+    <h1 class="font-serif text-5xl mb-8 text-gray-900 tracking-tight opacity-0 animate-fade-in delay-200">
+      I'm <span class="text-primary">John Doe</span>
+    </h1>
+    <div class="prose prose-lg opacity-0 animate-fade-in delay-400">
+      <p class="text-xl text-gray-700 mb-6">
+        I'm a software engineer and writer exploring the intersections of technology, design, and human behavior. Currently building tools that help developers be more productive at Company X.
+      </p>
+      <p class="text-gray-600 mb-8">
+        You can find me on <a href="https://twitter.com/yourusername" class="text-primary hover:text-primary-light transition-colors no-underline">Twitter</a>, 
+        <a href="https://github.com/yourusername" class="text-primary hover:text-primary-light transition-colors no-underline">GitHub</a>, or 
+        reach out via <a href="mailto:hello@yourdomain.com" class="text-primary hover:text-primary-light transition-colors no-underline">email</a>.
+      </p>
+    </div>
+  </AnimatedSection>
+</section>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

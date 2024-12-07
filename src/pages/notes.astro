@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+
+const notes = [
+  {
+    title: "On Building Better Systems",
+    date: "2024-02-10",
+    content: "Quick thoughts on how systems thinking applies to software architecture..."
+  },
+  {
+    title: "Reading Notes: The Pragmatic Programmer",
+    date: "2024-02-05",
+    content: "Key insights from revisiting this classic programming book..."
+  },
+  {
+    title: "TIL: Rust's Ownership Model",
+    date: "2024-02-01",
+    content: "Understanding Rust's unique approach to memory management..."
+  }
+];
+---
+
+<Layout title="Notes | John Doe">
+  <Navigation />
+  <main class="max-w-3xl mx-auto px-4 py-20">
+    <h1 class="font-serif text-4xl mb-12 text-gray-900">Notes</h1>
+    <div class="space-y-12">
+      {notes.map(note => (
+        <article class="prose">
+          <h2 class="text-2xl font-serif text-gray-900">{note.title}</h2>
+          <time class="text-sm text-gray-500">{note.date}</time>
+          <p class="text-gray-700">{note.content}</p>
+        </article>
+      ))}
+    </div>
+  </main>
+</Layout>

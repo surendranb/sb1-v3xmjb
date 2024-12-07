@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+
+const posts = [
+  {
+    title: "The Art of Building Maintainable Software",
+    date: "2024-02-15",
+    excerpt: "Exploring principles and practices that help create sustainable codebases that stand the test of time.",
+    slug: "maintainable-software"
+  },
+  {
+    title: "Understanding System Design Through Mental Models",
+    date: "2024-02-01",
+    excerpt: "How different mental models from various disciplines can help us better understand and design complex systems.",
+    slug: "system-design-mental-models"
+  },
+  {
+    title: "The Future of Developer Tools",
+    date: "2024-01-15",
+    excerpt: "Examining trends and possibilities in the evolution of tools that shape how we build software.",
+    slug: "future-developer-tools"
+  }
+];
+---
+
+<Layout title="Writing | John Doe">
+  <Navigation />
+  <main class="max-w-3xl mx-auto px-4 py-20">
+    <h1 class="font-serif text-4xl mb-12 text-gray-900">Writing</h1>
+    <div class="space-y-12">
+      {posts.map(post => (
+        <article class="prose">
+          <h2 class="text-2xl font-serif">
+            <a href={`/writing/${post.slug}`} class="text-gray-900 hover:text-primary no-underline">
+              {post.title}
+            </a>
+          </h2>
+          <time class="text-sm text-gray-500">{post.date}</time>
+          <p class="text-gray-700">{post.excerpt}</p>
+        </article>
+      ))}
+    </div>
+  </main>
+</Layout>
