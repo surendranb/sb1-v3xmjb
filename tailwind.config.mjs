@@ -14,11 +14,6 @@ export default {
           DEFAULT: '#E67E22',
           light: '#F39C12',
           dark: '#d35400',
-        },
-        secondary: {
-          DEFAULT: '#27AE60',
-          light: '#2ECC71',
-          dark: '#219a52',
         }
       },
       fontFamily: {
@@ -33,8 +28,6 @@ export default {
             '--tw-prose-headings': theme('colors.gray.900'),
             '--tw-prose-links': theme('colors.primary.DEFAULT'),
             '--tw-prose-bold': theme('colors.gray.900'),
-            '--tw-prose-counters': theme('colors.gray.600'),
-            '--tw-prose-bullets': theme('colors.gray.400'),
             '--tw-prose-quotes': theme('colors.gray.900'),
             '--tw-prose-quote-borders': theme('colors.accent.DEFAULT'),
             maxWidth: 'none',
@@ -46,17 +39,20 @@ export default {
             '--tw-prose-headings': theme('colors.white'),
             '--tw-prose-links': theme('colors.primary.light'),
             '--tw-prose-bold': theme('colors.white'),
-            '--tw-prose-counters': theme('colors.gray.400'),
-            '--tw-prose-bullets': theme('colors.gray.600'),
             '--tw-prose-quotes': theme('colors.gray.100'),
             '--tw-prose-quote-borders': theme('colors.accent.light'),
           },
         },
       }),
+      lineClamp: {
+        1: '1',
+        2: '2',
+        3: '3',
+      },
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
   ],
 };

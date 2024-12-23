@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 interface Props {
   tags: string[];
@@ -10,7 +10,9 @@ interface Props {
 const ContentFilter: React.FC<Props> = ({ tags, onFilterChange, activeTag }) => {
   return (
     <div className="flex flex-wrap gap-2 mb-8">
-      <button
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => onFilterChange('all')}
         className={`px-3 py-1 rounded-full transition-colors ${
           activeTag === 'all'
@@ -19,10 +21,12 @@ const ContentFilter: React.FC<Props> = ({ tags, onFilterChange, activeTag }) => 
         }`}
       >
         All
-      </button>
+      </motion.button>
       {tags.map((tag) => (
-        <button
+        <motion.button
           key={tag}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => onFilterChange(tag)}
           className={`px-3 py-1 rounded-full transition-colors ${
             activeTag === tag
@@ -31,7 +35,7 @@ const ContentFilter: React.FC<Props> = ({ tags, onFilterChange, activeTag }) => 
           }`}
         >
           {tag}
-        </button>
+        </motion.button>
       ))}
     </div>
   );

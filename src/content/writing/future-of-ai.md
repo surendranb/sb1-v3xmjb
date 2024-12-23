@@ -6,57 +6,53 @@ tags: ["AI", "Machine Learning", "Ethics", "Innovation"]
 featured: true
 ---
 
+import PullQuote from '../../components/ui/PullQuote';
+import Highlight from '../../components/ui/Highlight';
+import MediaEmbed from '../../components/content/MediaEmbed';
+
 # The Future of AI: A Deep Dive into Machine Learning Systems
 
 In this comprehensive exploration, we'll examine how artificial intelligence is reshaping our approach to problem-solving and creativity.
 
 ## The Evolution of AI Systems
 
-Before we dive deep into the future, let's understand where we are today with this insightful overview:
-
-<div class="aspect-w-16 aspect-h-9 my-8">
-  <iframe
-    src="https://www.youtube.com/embed/aircAruvnKk"
-    title="Neural Networks Explained"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-</div>
+<MediaEmbed 
+  type="youtube"
+  src="https://www.youtube.com/embed/aircAruvnKk"
+  title="Neural Networks Explained"
+/>
 
 ## The Human Element in AI Development
 
-<div class="pull-quote">
-  "The most powerful AI systems will be those that augment human capabilities rather than replace them."
-</div>
+<PullQuote>
+  The most powerful AI systems will be those that augment human capabilities rather than replace them.
+</PullQuote>
 
 This perspective is further elaborated in this fascinating podcast discussion:
 
-<iframe 
-  src="https://open.spotify.com/embed/episode/7d2qd2rD4aKG54musxLm6q" 
-  width="100%" 
-  height="152" 
-  frameborder="0" 
-  allowtransparency="true" 
-  allow="encrypted-media"
-></iframe>
+<MediaEmbed 
+  type="spotify"
+  src="https://open.spotify.com/embed/episode/1XhfKZGmxdvFJG8XQWjIYr"
+/>
 
 ## Visual Understanding of Neural Networks
 
-Understanding how neural networks process information is crucial:
-
-![Neural Network Architecture](https://images.unsplash.com/photo-1732470878984-f35c1a805e3f)
+<MediaEmbed 
+  type="image"
+  src="https://res.cloudinary.com/demo/image/upload/neural_network_diagram.jpg"
+  title="Neural Network Architecture"
+/>
 
 ## Key Considerations
 
 1. **Ethical Implementation**
-   - Bias detection and mitigation
+   - <Highlight>Bias detection and mitigation</Highlight>
    - Transparency in decision-making
    - Privacy considerations
 
 2. **Technical Architecture**
    - Scalable infrastructure
-   - Model optimization
+   - <Highlight color="accent">Model optimization</Highlight>
    - Resource efficiency
 
 3. **Human-AI Collaboration**

@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Home from '../components/Home.astro';
+import ContentGrid from '../components/content/ContentGrid';
 ---
 
 <Layout title="John Doe">
   <Navigation />
   <Home />
+  <ContentGrid client:load />
 </Layout>
