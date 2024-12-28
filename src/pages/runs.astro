@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const contentPath = join(__dirname, '../../sb1-v3xmjb/src/content/index.html');
+const contentPath = join(__dirname, 'index.html');
 const buffer = await readFile(contentPath);
 const htmlContent = new TextDecoder('utf-8').decode(buffer)
 ---
