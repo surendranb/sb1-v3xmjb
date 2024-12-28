@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import { readFile } from 'fs/promises';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const contentPath = join(__dirname, '../content/index.html');
+const buffer = await readFile(contentPath);
+const htmlContent = new TextDecoder('utf-8').decode(buffer)
+---
+<Layout title="Running Stats">
+    <div class="nav-container">
+      <Navigation />
+    </div>
+    <div class="container-wrapper">
+      <div class="embedded-content" set:html={htmlContent}></div>
+    </div>
+  </Layout>
+  
+  <style>
+    .nav-container :global(nav > div) {
+      margin-left: 8rem;
+    }
+    :global(.embedded-content) {
+      width: 100%;
+    }
+/* <!-- <Layout title="Running Stats">
+  <Navigation />
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Stats</title>
+</head>
+<body>
+    <div class="embedded-content" set:html={htmlContent}></div>
+</body>
+</html>  --> */
