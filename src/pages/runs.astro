@@ -7,10 +7,12 @@ import { fileURLToPath } from 'url';
 
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const contentPath = join(__dirname, './index.html');
-const distPath = join(__dirname, '../../dist/pages/index.html'); 
+// const contentPath = join(__dirname, './index.html');
+const url = 'https://drive.google.com/uc?id=1rAtMIICTo4XeDBxu5ZLZU9epd8BrIJVN'; // Direct link to the file
+const response = await fetch(url);
+const buffer = await response.arrayBuffer();
 
-const buffer = await readFile(contentPath);
+// const buffer = await readFile(contentPath);
 const htmlContent = new TextDecoder('utf-8').decode(buffer)
 ---
 <Layout title="Running Stats">
